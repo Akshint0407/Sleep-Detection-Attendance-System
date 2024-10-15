@@ -34,7 +34,7 @@ Install the required dependencies:
     pip install -r requirements.txt
 
 Download the Dlib shape predictor model:
-
+http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2
 Download the shape_predictor_68_face_landmarks.dat file from this link, extract it, and place it in the project directory.
 
 💻 Usage
