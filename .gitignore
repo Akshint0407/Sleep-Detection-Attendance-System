@@ -1,0 +1,49 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+
+# Dlib and OpenCV related files
+*.dat
+*.bz2
+
+# Virtual environment
+env/
+venv/
+ENV/
+*.env
+
+# VSCode settings
+.vscode/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Log files and temp files
+*.log
+*.temp
+*.tmp
+*.pid
+
+# macOS system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+desktop.ini
+
+# Python virtual environment folders
+*.pyvenv
+
+# PyCharm IDE files
+.idea/
+
+# Coverage reports
+htmlcov/
+.coverage
+*.cover
+*.py,cover
+
+# Test result folders
+.junit/
+test-results/
