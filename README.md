@@ -53,6 +53,10 @@ Here’s a sample of how the system works:
 The program reads video frames or saved images, detects faces, and calculates EAR.
 If the EAR is below the set threshold (EYE_AR_THRESH) for a certain number of frames, it identifies the person as asleep.
 ## 🖼️ Screenshots
+## 🖼️ Screenshots
+
+![Screenshot 1](sleeping.png)
+![Screenshot 2](awake.png)
 
 ## 📅 Future Work
 We aim to improve the system with the following features:
