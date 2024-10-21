@@ -36,7 +36,7 @@ Download the Dlib shape predictor model:
 
 Download the shape_predictor_68_face_landmarks.dat.bz2.
 Extract the shape_predictor_68_face_landmarks.dat file and place it in the project directory.
-💻 Usage
+## 💻 Usage
 To run the sleep detection system on video frames or images:
 
 bash
@@ -47,18 +47,18 @@ EYE_AR_THRESH: The threshold for determining closed eyes.
 EYE_AR_CONSEC_FRAMES: Number of consecutive frames required to confirm sleep.
 You can tweak these parameters in the code for better accuracy depending on your video input.
 
-📋 Example
+## 📋 Example
 Here’s a sample of how the system works:
 
 The program reads video frames or saved images, detects faces, and calculates EAR.
 If the EAR is below the set threshold (EYE_AR_THRESH) for a certain number of frames, it identifies the person as asleep.
-🖼️ Screenshots
+## 🖼️ Screenshots
 
-📅 Future Work
+## 📅 Future Work
 We aim to improve the system with the following features:
 
 Gaze Detection: Expand the system's capabilities to detect attention or focus based on eye gaze.
 Summary Generation: Generate a comprehensive report at the end of a session summarizing the sleep detection statistics.
-🤝 Contributors
+## 🤝 Contributors
 Dhruv Kumar
 Akshint Varma
