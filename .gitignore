@@ -24,6 +24,7 @@ ENV/
 *.temp
 *.tmp
 *.pid
+*.dat
 
 # macOS system files
 .DS_Store
@@ -44,6 +45,3 @@ htmlcov/
 *.cover
 *.py,cover
 
-# Test result folders
-.junit/
-test-results/

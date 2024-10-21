@@ -4,11 +4,11 @@ import numpy as np
 
 # Constants for EAR calculation
 EYE_AR_THRESH = 0.25  # Threshold for sleep detection
-EYE_AR_CONSEC_FRAMES = 25  # Number of consecutive frames to confirm sleep
+EYE_AR_CONSEC_FRAMES = 10 # Number of consecutive frames to confirm sleep
 
 # Load Dlib's face detector and landmark predictor
 detector = dlib.get_frontal_face_detector()
-predictor_path = 'shape_predictor_68_face_landmarks.dat'  # model used
+predictor_path =  r'C:\Users\dhruv\OneDrive\Desktop\sleep_detection\shape_predictor_68_face_landmarks.dat' # model used
 predictor = dlib.shape_predictor(predictor_path)
 
 def calculate_eye_aspect_ratio(eye):
@@ -36,8 +36,12 @@ def preprocess_frame(frame):
     # Convert back to BGR for further processing if needed
     return cv2.cvtColor(equalized_frame, cv2.COLOR_GRAY2BGR)
 
-def detect_sleep(frames):
+def detect_sleep(frames, mode="video"):
     """Detect sleep from the given frames and check for human presence."""
+    if mode == "image":
+        EYE_AR_CONSEC_FRAMES = 1
+    else:
+        EYE_AR_CONSEC_FRAMES = 10
     sleep_counter = 0
     is_sleeping = False
     not_human_present = 0  # Count of frames with no human detected
@@ -90,11 +94,10 @@ def detect_sleep(frames):
             break  # Exit the outer loop if sleeping is detected
 
     # Check if there were any frames with human presence
-    if not_human_present >= total_frames // 2:
-        print('No human present.')
+    if not_human_present >= total_frames // 2 and mode != "image":
         return (True, 0)  # 0 for no person present
 
     # Return status based on the detection results
     if is_sleeping:
         return (True, 1)  # 1 for person was present but sleeping
-    return (False, 0)  # 0 for person present but not sleeping
+    return (False, 1)  # 1 for person present but not sleeping
