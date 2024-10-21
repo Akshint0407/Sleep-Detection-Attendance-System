@@ -33,7 +33,7 @@ bash
 Copy code
 pip install -r requirements.txt
 Download the Dlib shape predictor model:
-
+http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2
 Download the shape_predictor_68_face_landmarks.dat.bz2.
 Extract the shape_predictor_68_face_landmarks.dat file and place it in the project directory.
 ## 💻 Usage
